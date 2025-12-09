@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simulation Result</title>
+</head>
+<body>
+    <h1>Simulation Result</h1>
+
+    <p>Starting Price (S0): {{ S0 }}</p>
+    <p>Volatility (sigma): {{ sigma }}</p>
+    <p>Average Final Price (over many simulations): {{ avg_price }}</p>
+
+    <h2>Sample Price Paths</h2>
+
+    {% if plot_data %}
+        <img src="data:image/png;base64,{{ plot_data }}" alt="Simulation graph">
+    {% else %}
+        <p>No graph available.</p>
+    {% endif %}
+
+    <br><br>
+    <a href="/">Run another simulation</a>
+</body>
+</html>
